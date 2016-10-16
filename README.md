@@ -1,6 +1,4 @@
-<snippet>
-  <content><![CDATA[
-# ${1:Project Name}
+# Flask Web Args
 
 A simple library to parse and validate web args in Flask. This library will validate:
 
@@ -23,7 +21,7 @@ pip install flask_web_args
 
 ## Usage
 
-```
+```python
 import flask
 import flask_web_args
 
@@ -71,7 +69,3 @@ def pokemon_select(
 3. Commit your changes: `git commit -am 'Add some feature'`
 4. Push to the branch: `git push origin my-new-feature`
 5. Submit a pull request :D
-
-]]></content>
-  <tabTrigger>readme</tabTrigger>
-</snippet>
