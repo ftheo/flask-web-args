@@ -1,27 +1,3 @@
-# Flask Web Args
-
-A simple library to parse and validate web args in Flask. This library will validate:
-
-1. url variables (`/user/<user_name>`)
-2. url parameters (`/user?limit=5`)
-
-What's cool about `flask-web-args` is that parsed parameters are accessed inside the function as if they were passed.
-
-Other cool stuff you can do:
-
-* Add default value
-* Expect a list of possible values
-* Define your custom function to return the parsed/valid value
-
-## Installation
-
-```
-pip install flask_web_args
-```
-
-## Usage
-
-```python
 import flask
 import flask_web_args.validator as validator
 import flask_web_args.validate_wrapper as validate_wrapper
@@ -61,12 +37,3 @@ def pokemon_select(
         info=validator.Validator(arg_type=str, valid=lambda x: x.endswith("_info"))
         ):
     return flask.jsonify({"pokemon": pokemon, "info": info})
-```
-
-## Contributing
-
-1. Fork it!
-2. Create your feature branch: `git checkout -b my-new-feature`
-3. Commit your changes: `git commit -am 'Add some feature'`
-4. Push to the branch: `git push origin my-new-feature`
-5. Submit a pull request :D
