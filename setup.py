@@ -8,4 +8,7 @@ setup(name='flask_web_args',
       author_email='ftheo3@gmail.com',
       license='MIT',
       packages=['flask_web_args'],
+      install_requires=[
+          'flask',
+      ],
       zip_safe=False)
