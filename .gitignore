@@ -4,3 +4,5 @@
 *.egg-info
 # PyPi distribution package
 dist*
+env*
+*.pyc

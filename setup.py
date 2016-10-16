@@ -11,4 +11,6 @@ setup(name='flask_web_args',
       install_requires=[
           'flask',
       ],
+      test_suite='nose.collector',
+      tests_require=['nose'],
       zip_safe=False)
