@@ -53,9 +53,9 @@ def pokemon_list(
 @app.route('/pokemon_list/<pokemon>')
 @flask_web_args.validate_args
 def pokemon_select(
-        # use function for custom validation criteria
+        # use function for custom validation criteria. Return value or None if invalid
         # Required parameters (part of the url path) are automatically enforced
-        pokemon=flask_web_args.Validator(valid_value=lambda x: x),
+        pokemon=flask_web_args.Validator(valid_value=lambda x: PokemonModel.find(x)),
         # valid can also be a function
         info=flask_web_args.Validator(arg_type=str, valid=lambda x: x.endswith("_info"))
         ):
