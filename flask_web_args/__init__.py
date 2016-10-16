@@ -131,7 +131,7 @@ class Validator:
         error_msg = self._check_value_is_valid("__unknown__", default)
         assert error_msg == "", error_msg
         # If we don't pass in a valid_value then we have to pass one of either arg_type or default
-        assert valid_value or (bool(arg_type) != bool(default)), "arg_type can be inferred from default so don't pass both"
+        assert valid_value or (bool(arg_type) != bool(default)), "arg_type can be inferred from default. Pass either default or arg_type"
         if default is not None:
             assert type(default) in Validator.VALID_TYPES, "default needs to be one of of type {}".format(Validator.VALID_TYPES)
             self.arg_type = type(default)
